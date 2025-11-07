@@ -1,0 +1,62 @@
+.about-me {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: rgba(26, 26, 26, 0.8); /* Fundo semi-transparente para destacar sobre o Matrix */
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.about-me h2 {
+  font-size: 2.5rem;
+  color: #00d8ff;
+}
+
+.about-me-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap; /* Garante que os cards quebrem a linha em telas menores */
+}
+
+.about-me-card {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden; /* Esconde qualquer parte da imagem que "vaze" para fora durante o zoom */
+  width: 280px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.about-me-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-me-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de zoom */
+}
+
+/* Adiciona o efeito de zoom na imagem quando o mouse está sobre o card */
+.about-me-card:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .about-me {
+    padding: 3rem 1rem;
+  }
+
+  .about-me-card {
+    width: 250px;
+    height: 312px;
+  }
+}

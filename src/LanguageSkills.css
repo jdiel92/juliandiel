@@ -1,0 +1,74 @@
+.language-skills {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: rgba(26, 26, 26, 0.8);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.language-skills h2 {
+  font-size: 2.5rem;
+  color: #00d8ff;
+  margin-bottom: 3rem;
+}
+
+.language-icons {
+  display: grid; /* Default para telas maiores */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.language-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-icon {
+  font-size: 3rem; /* Tamanho do ícone */
+  color: #61dafbaa; /* Cor dos ícones */
+  border: 2px solid #61dafbaa;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.language-icon img {
+  max-width: 60%; /* Ajusta o tamanho da imagem para 60% do círculo */
+  max-height: 60%; /* Ajusta o tamanho da imagem para 60% do círculo */
+  object-fit: contain; /* Garante que a imagem seja contida sem cortar ou distorcer */
+  transition: transform 0.3s ease; /* Transição para o efeito de zoom no hover */
+}
+
+.language-icon:hover { /* Efeito de hover no círculo */
+  transform: scale(1.1);
+  border-color: #00d8ff;
+}
+
+.language-icon:hover img { /* Efeito de zoom na imagem dentro do círculo */
+  transform: scale(1.1);
+}
+
+.language-item p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .language-icons {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+  }
+}
+
+@media (max-width: 480px) {
+  .language-icons {
+    grid-template-columns: repeat(1, 1fr); /* 1 coluna em telas muito pequenas */
+  }
+}

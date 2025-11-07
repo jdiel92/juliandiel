@@ -1,0 +1,10 @@
+.matrix-background {
+  position: fixed; /* Fixado para cobrir toda a viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Garante que fique atrás de outros conteúdos */
+  opacity: 0.65; /* A opacidade solicitada */
+  background-color: #000; /* Cor de fundo de fallback */
+}
